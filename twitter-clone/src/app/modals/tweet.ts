@@ -1,7 +1,8 @@
 
 export interface Tweet {
+    id: number,
     author: string,
-    publishDate: Date,
+    publishDate: number,
     content: string,
     like: boolean,
     retweet: boolean
