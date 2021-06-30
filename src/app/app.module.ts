@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TweetStreamComponent } from './tweet-stream/tweet-stream.component';
+import { FullTweetComponent } from './full-tweet/full-tweet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TweetStreamComponent
+    TweetStreamComponent,
+    FullTweetComponent
   ],
   imports: [
     BrowserModule,
