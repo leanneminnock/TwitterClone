@@ -1,0 +1,11 @@
+<div>
+    <ul>
+        <li class="list-group-item list-group-item-action" *ngFor="let tweet of data.tweets">
+            {{tweet.author}}
+            {{tweet.publishDate}}
+            {{tweet.content}}
+            <button>Like</button>
+            <button>Retweet</button>
+        </li>
+    </ul>
+</div>
