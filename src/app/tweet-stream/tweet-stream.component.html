@@ -1,13 +1,21 @@
-<div class="col-md-4 offset-md-4">
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item list-group-item-action" *ngFor="let tweet of data.tweets">
-            {{tweet.author}}
-            {{tweet.publishDate | date:'dd/MM/yyyy'}}
-            <br>
-            {{tweet.content}}
-            <br>
-            <button>Like</button>
-            <button>Retweet</button>
-        </li>
-    </ul>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <ul class="list-group list-group-flush">
+
+            <li class="list-group-item list-group-item-action" *ngFor="let tweet of data.tweets">
+                <a class="text-dark" [routerLink]="['/tweet', tweet.id]">
+                    <h5>
+                        {{tweet.author}}
+                        {{tweet.publishDate | date:'dd/MM/yyyy'}}
+                    </h5>
+                    <br>
+                    <p>{{tweet.content}}</p>
+                    <br>
+                </a>
+                    <button>Like</button>
+                    <button>Retweet</button>
+            </li>
+
+        </ul>
+    </div>
 </div>

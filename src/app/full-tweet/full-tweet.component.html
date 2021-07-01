@@ -1,1 +1,13 @@
-<p>full-tweet works!</p>
+<div class="row" *ngIf="tweet">
+    <div class="col-md-4 offset-md-4 fulltweet">
+        <h5>
+            {{tweet.author}}
+            {{tweet.publishDate | date:'dd/MM/yyyy'}}
+        </h5>
+        <br>
+        <p>{{tweet.content}}</p>
+        <br>
+        <button>Like</button>
+        <button>Retweet</button>
+    </div>
+</div>

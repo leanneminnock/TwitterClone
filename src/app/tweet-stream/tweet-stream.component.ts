@@ -8,11 +8,17 @@ import { Tweet } from '../modals/tweet';
   styleUrls: ['./tweet-stream.component.css']
 })
 export class TweetStreamComponent implements OnInit {
- public tweets: Tweet | undefined;
 
   constructor(public data: DataStoreService) { }
+  public selectedTweet: Tweet | undefined;
+
+  public OnTweetSelected(tweet: Tweet){
+    console.log(`Got list: ${tweet.id}!`);
+    this.selectedTweet = tweet;
+  }
 
   ngOnInit(): void {
+    
   }
 
 }
