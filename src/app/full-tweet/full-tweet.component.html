@@ -7,8 +7,8 @@
         <br>
         <p>{{tweet.content}}</p>
         <br>
-        <button>Like</button>
-        <button>Retweet</button>
+        <button (click)="onLiked(tweet)">{{tweet.like ? "Liked" : "Like"}}</button>
+        <button (click)="onRetweeted(tweet)">{{tweet.retweet ? "Retweeted" : "Retweet"}}</button>
     </div>
    
     <div class="col-md-4 offset-md-4 comments">

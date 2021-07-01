@@ -20,4 +20,12 @@ export class FullTweetComponent implements OnInit {
     });
   }
 
+  public onLiked(tweet: Tweet){
+    tweet.like = !tweet.like;
+   }
+   
+ public onRetweeted(tweet: Tweet){
+    tweet.retweet = !tweet.retweet;
+ }
+
 }

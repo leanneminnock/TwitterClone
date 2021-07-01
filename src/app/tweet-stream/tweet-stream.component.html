@@ -1,7 +1,6 @@
 <div class="row">
     <div class="col-md-4 offset-md-4">
         <ul class="list-group list-group-flush">
-
             <li class="list-group-item list-group-item-action" *ngFor="let tweet of data.tweets">
                 <a class="text-dark" [routerLink]="['/tweet', tweet.id]">
                     <h5>
@@ -12,10 +11,11 @@
                     <p>{{tweet.content}}</p>
                     <br>
                 </a>
-                    <button>Like</button>
-                    <button>Retweet</button>
+                    <button (click)="onLiked(tweet)">{{tweet.like ? "Liked" : "Like"}}</button>
+                    <button (click)="onRetweeted(tweet)">{{tweet.retweet ? "Retweeted" : "Retweet"}}</button>
+                    <br>
+                    {{tweet | json}}
             </li>
-
         </ul>
     </div>
 </div>

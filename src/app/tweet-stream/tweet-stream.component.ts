@@ -10,15 +10,17 @@ import { Tweet } from '../modals/tweet';
 export class TweetStreamComponent implements OnInit {
 
   constructor(public data: DataStoreService) { }
-  public selectedTweet: Tweet | undefined;
-
-  public OnTweetSelected(tweet: Tweet){
-    console.log(`Got list: ${tweet.id}!`);
-    this.selectedTweet = tweet;
-  }
+  
 
   ngOnInit(): void {
-    
+  }
+
+  public onLiked(tweet: Tweet){
+     tweet.like = !tweet.like;
+  
+    }
+  public onRetweeted(tweet: Tweet){
+     tweet.retweet = !tweet.retweet;
   }
 
 }
