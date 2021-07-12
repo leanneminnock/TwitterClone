@@ -1,6 +1,10 @@
 li{
-    text-align: center;
+    padding-bottom: 20px;
 }
 a{
     text-decoration: none;
+}
+.header{
+    background-color: azure;
+ 
 }

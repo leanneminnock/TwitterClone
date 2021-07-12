@@ -1,5 +1,5 @@
-<div class="jumbotron" >
-    <div class="fulltweet" *ngIf="tweet">
+<div class="jumbotron jumbotron jumbotron-fluid">
+    <div class="container fulltweet" *ngIf="tweet">
         <h5 class="display-6">
             {{tweet.author}}
             {{tweet.publishDate | date:'dd/MM/yyyy'}}
@@ -10,18 +10,18 @@
         <button type="button" class="btn btn-secondary"  [ngClass]="{'btn-info': tweet.retweet}" (click)="onRetweeted(tweet)"><i class="fas fa-retweet"></i> {{tweet.retweet ? "Retweeted" : "Retweet"}}</button>
     </div>
     <hr class="my-4">
-    <div class="col-md-4 comments">
-        <H5>Comments</H5>
-        <ul>
-            <li>
+    <div class="card col-md-3 offset-md-3">
+        <H5 class="card-header">Comments</H5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
                 Name Date
                 Comment 1
             </li>
-            <li>
+            <li class="list-group-item">
                 Name Date
                 Comment 2
             </li>
-            <li>
+            <li class="list-group-item">
                 Name Date
                 Comment 3
             </li>
