@@ -7,8 +7,8 @@
         <br>
         <p>{{tweet.content}}</p>
         <br>
-        <button type="button" class="btn btn-secondary" (click)="onLiked(tweet)"><i class="far fa-thumbs-up"></i> {{tweet.like ? "Liked": "Like"}}</button>
-        <button type="button" class="btn btn-secondary"(click)="onRetweeted(tweet)"><i class="fas fa-retweet"></i> {{tweet.retweet ? "Retweeted" : "Retweet"}}</button>
+        <button type="button" class="btn btn-secondary"  [ngClass]="{'btn-info': tweet.like}" (click)="onLiked(tweet)"><i class="far fa-thumbs-up"></i> {{tweet.like ? "Liked": "Like"}}</button>
+        <button type="button" class="btn btn-secondary"  [ngClass]="{'btn-info': tweet.retweet}" (click)="onRetweeted(tweet)"><i class="fas fa-retweet"></i> {{tweet.retweet ? "Retweeted" : "Retweet"}}</button>
     </div>
    
     <div class="col-md-4 offset-md-4 comments">
