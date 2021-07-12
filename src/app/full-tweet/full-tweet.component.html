@@ -1,17 +1,16 @@
-<div class="row" *ngIf="tweet">
-    <div class="col-md-4 offset-md-4 fulltweet">
-        <h5>
+<div class="jumbotron" >
+    <div class="fulltweet" *ngIf="tweet">
+        <h5 class="display-6">
             {{tweet.author}}
             {{tweet.publishDate | date:'dd/MM/yyyy'}}
         </h5>
-        <br>
-        <p>{{tweet.content}}</p>
-        <br>
+        <hr class="my-4">
+        <p class="lead">{{tweet.content}}</p>
         <button type="button" class="btn btn-secondary"  [ngClass]="{'btn-info': tweet.like}" (click)="onLiked(tweet)"><i class="far fa-thumbs-up"></i> {{tweet.like ? "Liked": "Like"}}</button>
         <button type="button" class="btn btn-secondary"  [ngClass]="{'btn-info': tweet.retweet}" (click)="onRetweeted(tweet)"><i class="fas fa-retweet"></i> {{tweet.retweet ? "Retweeted" : "Retweet"}}</button>
     </div>
-   
-    <div class="col-md-4 offset-md-4 comments">
+    <hr class="my-4">
+    <div class="col-md-4 comments">
         <H5>Comments</H5>
         <ul>
             <li>
