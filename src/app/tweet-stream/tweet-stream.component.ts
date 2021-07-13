@@ -13,6 +13,7 @@ export class TweetStreamComponent implements OnInit {
   
 
   ngOnInit(): void {
+    this.data.getTweets();
   }
 
   public onLiked(tweet: Tweet){
